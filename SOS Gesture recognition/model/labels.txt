@@ -1,0 +1,2 @@
+0 thumb_trap
+1 other_signal

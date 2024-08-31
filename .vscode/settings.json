@@ -1,0 +1,6 @@
+{
+    "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "terminal.integrated.lineHeight": 2,
+}

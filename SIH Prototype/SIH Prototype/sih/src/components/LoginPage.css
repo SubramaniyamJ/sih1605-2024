@@ -1,0 +1,301 @@
+/* body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #BB9AB1 0%, #987D9A 100%); 
+
+.login-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.login-container.login-mode {
+  width: 800px;
+  height: 650px;
+}
+
+.left-panel {
+  flex: 1;
+  background-image: url('/Users/sonika.n/SIH Prototype/sih/src/assets/login.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #F5D8D8; 
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #F5D8D8; 
+  cursor: pointer;
+  margin: 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #F5D8D8; 
+}
+
+.input {
+  width: 95%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #987D9A; 
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: rgba(152, 125, 154, 0.7); 
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  color: #F5D8D8; 
+  font-size: 14px;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.error {
+  color: #FEECEB; 
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+  background-color: #987D9A; 
+  border: none;
+  border-radius: 10px;
+  color: #FEECEB; 
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #BB9AB1; 
+}
+
+.divider {
+  color: #F5D8D8; 
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+} */
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: whitesmoke;
+}
+
+.main-login{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.login-container.login-mode {
+  width: 800px;
+  height: 650px;
+}
+
+.left-panel {
+  flex: 1;
+  background-image: url('D:/sih1605/SIH Prototype/SIH Prototype/sih/src/assets/login.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000; /* Updated color */
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3e3e3e; 
+  cursor: pointer;
+  margin: 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #AED8CC; 
+}
+
+.input {
+  width: 95%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: #7A316F; 
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: rgba(122, 49, 111, 0.7); 
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  color: #AED8CC; 
+  font-size: 14px;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.error {
+  color: #461959; 
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ba26a4; 
+  border: none;
+  border-radius: 10px;
+  color: white; 
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #CD6688; 
+}
+
+.divider {
+  color: #AED8CC; 
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+} 
