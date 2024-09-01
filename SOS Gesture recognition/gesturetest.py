@@ -6,7 +6,7 @@ from cvzone.HandTrackingModule import HandDetector
 from cvzone.ClassificationModule import Classifier
 import mediapipe as mp
 from datetime import datetime
-import requests 
+import requests
 
 imgSize = 300
 cap = cv2.VideoCapture(0)
@@ -27,6 +27,7 @@ def extract_keypoints(results):
     left_hand = np.array([[res.x, res.y, res.z] for res in results.left_hand_landmarks.landmark]).flatten() if results.left_hand_landmarks else np.zeros(21 * 3)
     right_hand = np.array([[res.x, res.y, res.z] for res in results.right_hand_landmarks.landmark]).flatten() if results.right_hand_landmarks else np.zeros(21 * 3)
     return np.concatenate([pose, face, left_hand, right_hand])
+
 
 def mediapipe_detection(image, model):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -97,12 +98,12 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
                 requests.post('http://127.0.0.1:5000/update-latest-detection', json=data)  
             except Exception as e:
                 print(f"Failed to send data: {e}")
-                            
+                
         else:
             color = (255, 255, 255)
             try:
                 data = {'gesture': '', 'timestamp': ''}
-                requests.post('http://127.0.0.1:5000/update-none-detection', json=data)  
+                requests.post('http://127.0.0.1:5000/update-none-detection', json=data)
             except Exception as e:
                 print(f"Failed to send data: {e}")
             

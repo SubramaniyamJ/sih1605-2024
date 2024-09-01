@@ -51,7 +51,7 @@ const Gesture = () => {
       console.log(data.status);
       setTimeout(() => {
         setStarted(true)
-      }, 15000)
+      }, 20000)
     } catch (error) {
       console.error('Error:', error);
     }

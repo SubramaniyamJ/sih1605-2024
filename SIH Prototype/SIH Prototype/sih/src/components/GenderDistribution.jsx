@@ -10,6 +10,7 @@ const GenderDistribution = () => {
         {field: 'maleCount', headerName: 'Male Count', flex: 1},
         {field: 'femaleCount', headerName: 'Female Count', flex: 1},
         {field: 'isLoneWomen', headerName: 'Lone Women', flex: 1},
+        {field: 'isNightLoneWomen', headerName: 'Lone Women at night', flex: 1},
         {field: 'timestamp', headerName: 'TimeStamp', flex: 1}
     ]
 
@@ -44,6 +45,9 @@ const GenderDistribution = () => {
           try {
             const response = await fetch('http://127.0.0.1:5000/get-gd-details');
             const data = await response.json();
+            const date = new Date(data.timestamp.replace(' ', 'T'));
+            const hours = date.getHours();
+            const isNightTime = (hours >= 20 || hours < 6);
             console.log(data)
             if (data.gesture != '') {
               setGdData((prevGdData) => [ 
@@ -53,6 +57,7 @@ const GenderDistribution = () => {
                   maleCount: data.maleCount,
                   femaleCount: data.femaleCount,
                   isLoneWomen: data.femaleCount == 1 ? true : false,
+                  isNightLoneWomen: isNightTime,  
                   timestamp: data.timestamp,
                 },
               ]);
